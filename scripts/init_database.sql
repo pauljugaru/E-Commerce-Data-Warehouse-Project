@@ -1,5 +1,4 @@
 -- Create Database 
-
 USE master;
 GO
 
@@ -16,6 +15,7 @@ GO
 USE ECommerce_DWH;
 GO
 
+-- Create Schemas
 CREATE SCHEMA bronze;
 GO
 
