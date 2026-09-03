@@ -19,8 +19,8 @@ GO
 
 CREATE TABLE silver.olist_geolocation (
     geolocation_zip_code_prefix NVARCHAR(20),
-    geolocation_lat NVARCHAR(50),
-    geolocation_lng NVARCHAR(50),
+    geolocation_lat DECIMAL(9,6),
+    geolocation_lng DECIMAL(9,6),
     geolocation_city NVARCHAR(100),
     geolocation_state NVARCHAR(10),
     dwh_create_date DATETIME2 DEFAULT GETDATE()
@@ -38,8 +38,8 @@ CREATE TABLE silver.olist_order_items (
     product_id NVARCHAR(50),
     seller_id NVARCHAR(50),
     shipping_limit_date NVARCHAR(50),
-    price NVARCHAR(50),
-    freight_value NVARCHAR(50),
+    price DECIMAL(15,2),
+    freight_value DECIMAL(15,2),
     dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO
@@ -102,8 +102,8 @@ GO
 CREATE TABLE silver.olist_products (
     product_id NVARCHAR(50),
     product_category_name NVARCHAR(100),
-    product_name_lenght NVARCHAR(50),
-    product_description_lenght NVARCHAR(50),
+    product_name_length NVARCHAR(50),
+    product_description_length NVARCHAR(50),
     product_photos_qty NVARCHAR(50),
     product_weight_g NVARCHAR(50),
     product_length_cm NVARCHAR(50),
